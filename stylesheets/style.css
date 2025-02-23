@@ -1,0 +1,31 @@
+.main {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.main .lista {
+  background: linear-gradient(rgb(53, 0, 128), rgb(168, 3, 168));
+  border-radius: 15px;
+}
+.main .lista ul {
+  list-style-type: none;
+  width: 200px;
+  min-height: 200px;
+  color: white;
+}
+.main .lista ul li input[type=checkbox] {
+  margin: 0 auto;
+}
+.main .lista ul li input[type=checkbox]:checked + label {
+  text-decoration: line-through;
+  color: rgb(202, 202, 181);
+}
+.main .lista .add {
+  justify-self: center;
+}
+.main .lista .add button {
+  color: white;
+  background: linear-gradient(rgb(151, 95, 230), rgb(158, 97, 158));
+  border-radius: 90px;
+}/*# sourceMappingURL=style.css.map */
