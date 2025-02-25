@@ -32,6 +32,10 @@
         @include GradiantBackground(rgb(151, 95, 230), rgb(158, 97, 158));
         border-radius: 90px;
       }
+      input {
+        @include GradiantBackground(lightblue, rgb(195, 160, 228));
+        border-radius: 10px;
+      }
     }
   }
 }

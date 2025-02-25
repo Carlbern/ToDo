@@ -28,4 +28,8 @@
   color: white;
   background: linear-gradient(rgb(151, 95, 230), rgb(158, 97, 158));
   border-radius: 90px;
+}
+.main .lista .add input {
+  background: linear-gradient(lightblue, rgb(195, 160, 228));
+  border-radius: 10px;
 }/*# sourceMappingURL=style.css.map */
