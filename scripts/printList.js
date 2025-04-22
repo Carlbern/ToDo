@@ -1,14 +1,23 @@
-var _a, _b;
-import { listitems, list } from "./lists.js";
-let addSection = document.getElementsByClassName("add");
-let listan = document.querySelector("ul");
+import { lists } from "./lists.js";
+let main = document.getElementsByClassName("main");
+export function printLists(lists) {
+    main[0].innerHTML = "";
+    for (let i = 0; i < lists.length; i++) {
+        printList(lists[i]);
+    }
+}
 export function printList(list) {
-    listan.innerHTML = "";
+    var _a;
+    //Creating main element section
+    let lista = document.createElement("section");
+    lista.className = "lista";
+    //Creating listsection
+    let listan = document.createElement("ul");
+    listan.className = "listan";
     let title = document.createElement("h2");
     title.innerHTML = list.name;
     listan === null || listan === void 0 ? void 0 : listan.appendChild(title);
     list.items.forEach((element, index) => {
-        console.log(element);
         let li = document.createElement("li");
         //Creating checkbox
         let checkbox = document.createElement("input");
@@ -36,7 +45,7 @@ export function printList(list) {
         button.className = "deleteBtn";
         button.addEventListener("click", () => {
             list.items.splice(index, 1);
-            printList(list);
+            printLists(lists);
             console.log(list.items);
         });
         li.appendChild(checkbox);
@@ -44,26 +53,33 @@ export function printList(list) {
         li.appendChild(button);
         listan === null || listan === void 0 ? void 0 : listan.appendChild(li);
     });
-}
-//Creating Button
-let btn = document.createElement("button");
-btn.innerHTML = "add";
-btn === null || btn === void 0 ? void 0 : btn.addEventListener("click", () => {
-    let item = { text: input.value, isChecked: false };
-    listitems.push(item);
-    printList(list);
-    input.value = "";
-});
-//Creating input textField
-let input = document.createElement("input");
-input.type = "text";
-input.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
+    lista.appendChild(listan);
+    //BUTTONS
+    let addSection = document.createElement("div");
+    addSection.className = "add";
+    //Creating Button
+    let btn = document.createElement("button");
+    btn.innerHTML = "add";
+    btn === null || btn === void 0 ? void 0 : btn.addEventListener("click", () => {
         let item = { text: input.value, isChecked: false };
-        listitems.push(item);
-        printList(list);
+        list.items.push(item);
+        printLists(lists);
         input.value = "";
-    }
-});
-(_a = addSection[0]) === null || _a === void 0 ? void 0 : _a.appendChild(btn);
-(_b = addSection[0]) === null || _b === void 0 ? void 0 : _b.appendChild(input);
+    });
+    //Creating input textField
+    let input = document.createElement("input");
+    input.type = "text";
+    input.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+            let item = { text: input.value, isChecked: false };
+            list.items.push(item);
+            printLists(lists);
+            input.value = "";
+        }
+    });
+    addSection.appendChild(btn);
+    addSection.appendChild(input);
+    lista.appendChild(addSection);
+    console.log("här");
+    (_a = main[0]) === null || _a === void 0 ? void 0 : _a.appendChild(lista);
+}

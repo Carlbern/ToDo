@@ -2,5 +2,16 @@
   "dependencies": {
     "sass": "^1.85.1",
     "tsc": "^2.0.4"
-  }
+  },
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "To Do list application",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "build-sass": "sass stylesheets/style.scss stylesheets/style.css --watch",
+    "build-ts": "tsc ./scripts/index.ts --watch --target es6"
+  },
+  "author": "Filip Bernhard",
+  "license": "ISC"
 }

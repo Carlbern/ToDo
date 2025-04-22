@@ -1,3 +1,3 @@
-import { list } from "./lists.js";
-import { printList } from "./printList.js";
-printList(list);
+import { lists } from "./lists.js";
+import { printLists } from "./printList.js";
+printLists(lists);
