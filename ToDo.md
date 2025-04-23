@@ -2,7 +2,6 @@ Features to implement
 _____________________
 
 -Listan skall sparas mellan användning
-
 -Det ska visas en "Bar" med antal "Items" och hur många som är avklarade
 -Sidan ska använda TailwindCSS
 

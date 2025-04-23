@@ -1,5 +1,5 @@
 export {};
-import { stadning, list1, lists } from "./lists.js";
+import { lists } from "./lists.js";
 import { List, ListItem } from "./types.js";
 
 let main = document.getElementsByClassName("main");
