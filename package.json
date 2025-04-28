@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@tailwindcss/cli": "^4.1.4",
     "sass": "^1.85.1",
     "tailwindcss": "^4.1.4",
     "tsc": "^2.0.4"
@@ -9,7 +10,7 @@
   "description": "To Do list application",
   "main": "index.js",
   "scripts": {
-    "build-sass": "sass stylesheets/style.scss stylesheets/style.css --watch",
+    "build-tw": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
     "build-ts": "tsc ./scripts/index.ts --watch --target es6"
   },
   "author": "Filip Bernhard",

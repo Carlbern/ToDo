@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+.lista{
+    @apply bg-green-400;
+}
+
+.listan{
+
+
+    label{
+        @apply text-purple-500;
+    }
+
+    .deleteBtn{
+        @apply border-2;
+    }
+}
+
+.add{
+    @apply bg-amber-500;
+
+    button{
+        @apply border-t-2 bg-amber-700;
+    }
+
+    input[type=text]{
+        @apply border-2;
+    }
+
+}
+
