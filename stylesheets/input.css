@@ -1,30 +1,41 @@
 @import "tailwindcss";
 
 .lista{
-    @apply bg-green-400;
+    @apply bg-gray-200 p-1 flex flex-col justify-between;
+    
 }
 
 .listan{
 
+ 
+    h2{
+        @apply border-b-1 flex justify-center text-sm;
+    }
+    li{
+        @apply flex flex-row relative my-1 h-6;
 
-    label{
-        @apply text-purple-500;
+        label{
+            
+        }
+    
+        .deleteBtn{
+            @apply absolute right-0 mx-1 w-5 h-5 border-1 rounded-xl flex items-center justify-center cursor-pointer
+            hover:bg-red-500;
+        }
     }
 
-    .deleteBtn{
-        @apply border-2;
-    }
+   
 }
 
 .add{
-    @apply bg-amber-500;
+    @apply flex flex-row gap-1;
 
     button{
-        @apply border-t-2 bg-amber-700;
+        @apply border-1 rounded-sm text-sm w-7 cursor-pointer ;
     }
 
     input[type=text]{
-        @apply border-2;
+        @apply border-1 rounded-sm bg-white;
     }
 
 }

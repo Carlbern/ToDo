@@ -16,6 +16,7 @@ export function printList(list: List) {
   let lista = document.createElement("section");
   lista.className = "lista";
 
+  
   //Creating listsection
   let listan = document.createElement("ul");
   listan.className = "listan";

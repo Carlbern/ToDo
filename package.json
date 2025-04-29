@@ -3,14 +3,15 @@
     "@tailwindcss/cli": "^4.1.4",
     "sass": "^1.85.1",
     "tailwindcss": "^4.1.4",
-    "tsc": "^2.0.4"
+    "tsc": "^2.0.4",
+    "typescript": "^5.8.3"
   },
   "name": "todolist",
   "version": "1.0.0",
   "description": "To Do list application",
   "main": "index.js",
   "scripts": {
-    "build-tw": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "build-tw": "npx @tailwindcss/cli -i ./stylesheets/input.css -o ./stylesheets/output.css --watch",
     "build-ts": "tsc ./scripts/index.ts --watch --target es6"
   },
   "author": "Filip Bernhard",
